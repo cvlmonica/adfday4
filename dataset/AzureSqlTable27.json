@@ -1,0 +1,17 @@
+{
+	"name": "AzureSqlTable27",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabaseLS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "output5"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

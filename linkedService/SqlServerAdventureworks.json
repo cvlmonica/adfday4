@@ -1,0 +1,35 @@
+{
+	"name": "SqlServerAdventureworks",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"parameters": {
+			"servername": {
+				"type": "String",
+				"defaultValue": "LAPTOP-BA36MVQ0\\JAYANTH"
+			},
+			"databasename": {
+				"type": "String",
+				"defaultValue": "AdventureWorks2012"
+			},
+			"username": {
+				"type": "String",
+				"defaultValue": "jayanth"
+			},
+			"password": {
+				"type": "String",
+				"defaultValue": "training123$"
+			}
+		},
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"connectionString": "Server=LAPTOP-BA36MVQ0\\JAYANTH,1433;Initial Catalog=AdventureWorks2012;Persist Security Info=False;User ID=jayanth;Password=training123$;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;",
+			"userName": "@{linkedService().username}",
+			"password": "@{linkedService().password}"
+		},
+		"connectVia": {
+			"referenceName": "self-integrationRuntime1",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
